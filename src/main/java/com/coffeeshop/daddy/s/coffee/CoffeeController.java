@@ -18,7 +18,7 @@ public class CoffeeController {
 	@Autowired
 	private CoffeeService serv;
 	
-	@GetMapping("/Coffees")
+	@GetMapping("/get/Coffees")
 	public List<Coffee> list(){
 		return serv.listAll();
 	}
@@ -33,7 +33,7 @@ public class CoffeeController {
 		}	  
 	}
 	
-	@PostMapping("/Coffees")
+	@PostMapping("/add/Coffees")
 	public void add(@RequestBody Coffee coffee) {
 		serv.save(coffee);
 	}
